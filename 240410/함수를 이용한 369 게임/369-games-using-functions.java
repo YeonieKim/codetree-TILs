@@ -8,18 +8,23 @@ public class Main {
         int b = sc.nextInt();
 
         int cnt =0;
-        for(int i =a; i<=b; i++){
-            if(isMagicNumber(i) || multiple3(i) )
+        for(int i = a; i<=b; i++){
+            if(isMagicNumber(i))
                 cnt++;
         }
         System.out.print(cnt);
     }
+    public static boolean contain369(int n){
+        while(n > 0){
+            if(n %10 == 3 || n % 10 ==6 || n % 10 ==9)
+                return true;
+            n /= 10;
+        }
+        return false;
+    }
     public static boolean isMagicNumber(int n){
         int frontNum = n / 10;
         int backNum = n % 10;
-        return frontNum == 3 || frontNum == 6 || frontNum == 9 || backNum == 3 || backNum == 6 || backNum == 9;
-    }
-    public static boolean multiple3(int n){
-        return n % 3 ==0 ;
+        return  (n % 3 ==0) || contain369(n);
     }
 }
