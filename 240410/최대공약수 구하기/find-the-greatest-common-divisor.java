@@ -10,7 +10,7 @@ public class Main {
     }
     public static void GCD(int n, int m){
         int max = 1;
-        for(int i=1; i<n && i<m; i++){
+        for(int i=1; i<=n && i<=m; i++){
             if(n % i == 0 && m % i == 0){
                 max = i;
             }
