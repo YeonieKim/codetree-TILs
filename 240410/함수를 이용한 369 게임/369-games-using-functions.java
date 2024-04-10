@@ -9,12 +9,17 @@ public class Main {
 
         int cnt =0;
         for(int i =a; i<=b; i++){
-            if(isMagicNumber(i))
+            if(isMagicNumber(i) || multiple3(i) )
                 cnt++;
         }
         System.out.print(cnt);
     }
     public static boolean isMagicNumber(int n){
-        return n % 3 ==0 || n % 10 == 3 || n % 10 == 6 || n % 10 == 9 || n / 10 == 3 || n / 10 == 6 || n / 10 == 9;
+        int frontNum = n / 10;
+        int backNum = n % 10;
+        return frontNum == 3 || frontNum == 6 || frontNum == 9 || backNum == 3 || backNum == 6 || backNum == 9;
+    }
+    public static boolean multiple3(int n){
+        return n % 3 ==0 ;
     }
 }
