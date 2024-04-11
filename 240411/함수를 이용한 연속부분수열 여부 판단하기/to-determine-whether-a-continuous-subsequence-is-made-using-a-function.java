@@ -1,16 +1,23 @@
 import java.util.Scanner;
 
 public class Main {
-    public static boolean compareArr(int[] a, int[] b){
-        for(int i = 0; i<a.length; i++){
-            int num=0;
-            if(a[i]==b[0]){
-                for(int j = 1; j <b.length; j++){
-                    if(a[i+j] == b[j]){
-                        return true;
-                    }
-                }
-            }
+    public static int maxN = 100;
+    public static int n1;
+    public static int n2;
+    public static int[] a = new int[maxN];
+    public static int[] b = new int[maxN];
+
+    public static boolean compareArr(int n){
+        for(int i = 0; i<n2; i++){
+            if(a[i+n]!=b[i])
+                return false;
+        }
+        return true;
+    }
+    public static boolean isSubsequence(){
+        for(int i = 0; i <= n1-n2; i++){
+            if(compareArr(i))
+                return true;
         }
         return false;
     }
@@ -20,17 +27,14 @@ public class Main {
         int n1 = sc.nextInt();
         int n2 = sc.nextInt();
 
-        int[] arr1 = new int[n1];
-        int[] arr2 = new int[n2];
-
         for(int i = 0; i<n1; i++){
-            arr1[i] = sc.nextInt();
+            a[i] = sc.nextInt();
         }
         for(int i = 0; i<n2; i++){
-            arr2[i] = sc.nextInt();
+            b[i] = sc.nextInt();
         }
 
-        if(compareArr(arr1, arr2)){
+        if(isSubsequence()){
             System.out.print("Yes");
         }else{
             System.out.print("No");
