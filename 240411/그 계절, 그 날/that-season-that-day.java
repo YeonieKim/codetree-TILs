@@ -6,8 +6,6 @@ public class Main {
     public static boolean yoondal(){
         if(y % 4 != 0)
             return false;
-        if(y% 100 == 0)
-            return false;
         if(y%100 == 0 && y%400 != 0)
             return false;
         return true;
