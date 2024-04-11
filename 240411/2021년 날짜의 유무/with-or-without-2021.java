@@ -12,8 +12,10 @@ public class Main {
     public static boolean isDate(){
         if(d >31){
             return false;
-        }else if(d>30 && m == 4|| m == 6|| m == 9|| m ==11){
-            return false;
+        }
+        if(m == 4|| m == 6|| m == 9|| m ==11){
+            if(d>30)
+                return false;
         }else if(d > 28 && m == 2){
             return false;
         }
