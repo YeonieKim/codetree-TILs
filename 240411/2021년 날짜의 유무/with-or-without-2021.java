@@ -10,13 +10,20 @@ public class Main {
     }
 
     public static boolean isDate(){
-        if(d <= 31 && m == 1|| m == 3|| m == 5|| m == 7|| m == 8 ||m == 10||m==12)
-            return true;
-        if(d <= 30 && m == 4|| m == 6|| m == 9|| m ==11)
-            return true;
-        if(d <= 28 && m == 2)
-            return true;
-        return false;
+        if(d >32){
+            return false;
+        }else if(d>30 && m == 4|| m == 6|| m == 9|| m ==11){
+            return false;
+        }else if(d > 28 && m == 2){
+            return false;
+        }
+        // if(d <= 31 && m == 1|| m == 3|| m == 5|| m == 7|| m == 8 ||m == 10||m==12)
+        //     return true;
+        // if(d <= 30 && m == 4|| m == 6|| m == 9|| m ==11)
+        //     return true;
+        // if(d <= 28 && m == 2)
+        //     return true;
+        return true;
     }
 
     public static boolean isExsist(){
