@@ -10,7 +10,7 @@ for i in range(1, R-1):
     for j in range(1, C-1):
         for k in range(i+1,R-1):
             for l in range(j+1,C-1):
-                if(square[0][0] != square[i][j] and square[i][j] != square[k][l]):
+                if(square[0][0] != square[i][j] and square[i][j] != square[k][l] and square[k][l] != square[R-1][C-1]):
                     cnt += 1
                     #print(square[0][0])
                     #print(i, j, square[i][j])
