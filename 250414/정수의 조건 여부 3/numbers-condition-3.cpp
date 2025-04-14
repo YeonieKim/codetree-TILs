@@ -8,7 +8,7 @@ int main() {
     if( a%13==0 || a%19==0){
         cout << "True";
     }else{
-        "False";
+        cout << "False";
     }
 
     return 0;
