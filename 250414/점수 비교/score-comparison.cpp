@@ -3,14 +3,9 @@ using namespace std;
 
 int main() {
     // Please write your code here.
-    int Am, Ae; 
-    int Bm, Be;
-    cin >> Am >> Ae >> Bm >> Be;
+    int A, B;
+    cin >> A >> B;
 
-    if(Am>Bm && Ae>Be){
-        cout << 1;
-    }else {
-        cout << 0;
-    }
+    
     return 0;
 }
