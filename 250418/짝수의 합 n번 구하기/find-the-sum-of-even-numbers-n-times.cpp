@@ -7,21 +7,20 @@ int main() {
     cin >> n;
 
     int a[n], b[n];
+    int sum;
     for(int i=0; i<n; i++){
         cin >> a[i] >> b[i];
-    }
+    } 
 
-    int sum[n];
     for (int k=0; k<n; k++){
-        for(int j=a[k]; k<=b[k]; j++){
+        sum = 0;
+        for(int j=a[k]; j<=b[k]; j++){
             if(j%2==0){
-                sum[k] += j;
+                sum += j;
             }
         }
+        cout << sum << endl;
     }
-
-    for(int i=0;i<n;i++){
-        cout << sum[i] << endl;
-    }
+ 
     return 0;
 }
